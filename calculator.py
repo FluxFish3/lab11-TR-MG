@@ -1,9 +1,3 @@
-"""
-calculator.py
-- Defines functions used to create a simple calculator
-
-One function per operation, in order.
-"""
 #https://github.com/FluxFish3/lab11-TR-MG
 #Partner 1: Michael Galiani
 #Partner 2: Tomas Ramirez
