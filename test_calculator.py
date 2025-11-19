@@ -1,3 +1,7 @@
+#https://github.com/FluxFish3/lab11-TR-MG
+#Partner 1: Michael Galiani
+#Partner 2: Tomas Ramirez
+
 import unittest
 from calculator import *
 
@@ -16,12 +20,16 @@ class TestCalculator(unittest.TestCase):
 
 
     ######## Partner 1
-    # def test_multiply(self): # 3 assertions
-    #     fill in code
+    def test_multiply(self): # 3 assertions
+        self.assertEqual(multiply(2, 3), 6)
+        self.assertEqual(multiply(0, 5), 0)
+        self.assertEqual(multiply(-5, 6), -30)
 
-    # def test_divide(self): # 3 assertions
-    #     fill in code
-    # ##########################
+    def test_divide(self): # 3 assertions
+        self.assertEqual(div(10, 2), 5)
+        self.assertEqual(div(0, 5), 0)
+        self.assertEqual(div(-5, -1), 5)
+    ##########################
 
     ######## Partner 2
     def test_divide_by_zero(self):
@@ -46,21 +54,21 @@ class TestCalculator(unittest.TestCase):
     # ##########################
     
     ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
-    #     # call log function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     logarithm(0, 5)
-    #     fill in code
+    def test_log_invalid_argument(self): # 1
+        with self.assertRaises(ValueError):
+            logarithm(0, 5)
 
-    # def test_hypotenuse(self): # 3 assertions
-    #     fill in code
+    def test_hypotenuse(self): # 3 assertions
+        self.assertEqual(hypotenuse(1, 1), math.sqrt(2))
+        self.assertEqual(hypotenuse(3, 4), 5)
+        self.assertEqual(hypotenuse(5, 5), math.sqrt(50))
 
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
+    def test_sqrt(self): # 3 assertions
+        with self.assertRaises(ValueError):
+            square_root(-1)
+        self.assertEqual(square_root(25), 5)
+        self.assertEqual(square_root(16), 4)
+        self.assertEqual(square_root(100), 10)
     ##########################
 
 # Do not touch this
