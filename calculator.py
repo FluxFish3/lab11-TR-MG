@@ -4,11 +4,19 @@ calculator.py
 
 One function per operation, in order.
 """
-import math
 
 # First example
 import math
 
+def square_root(a):
+    try:
+        result = math.sqrt(a)
+        return result
+    except ValueError:
+        print("The value of a must be >= 0")
+
+def hypotenuse(a, b):
+    math.hypot(a, b)
 
 # First example
 def add(a, b):
