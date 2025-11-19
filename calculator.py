@@ -11,10 +11,10 @@ def square_root(a):
         result = math.sqrt(a)
         return result
     except ValueError:
-        print("The value of a must be >= 0")
+        raise ValueError()
 
 def hypotenuse(a, b):
-    math.hypot(a, b)
+    return math.hypot(a, b)
 
 # First example
 def add(a, b):
